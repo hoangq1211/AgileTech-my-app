@@ -55,11 +55,22 @@ const columns = [
     title: "Session Name",
     dataIndex: "session_name",
     key: "session_name",
+    filters: [
+      {
+        text: "London",
+        value: "London",
+      },
+      {
+        text: "New York",
+        value: "New York",
+      },
+    ],
   },
   {
     title: "Date",
     dataIndex: "date",
     key: "date",
+    sorter: (a, b) => a.date - b.age,
   },
   {
     title: "",
