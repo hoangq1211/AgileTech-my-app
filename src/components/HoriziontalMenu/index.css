@@ -1,0 +1,34 @@
+.horiziontal-menu-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid orange !important;
+}
+
+.horiziontal-menu-content-container::after {
+    border: none !important;
+}
+
+.horiziontal-menu-content {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ant-menu-horizontal {
+    
+}
+
+.ant-menu-horizontal > .ant-menu-item a:hover,
+.ant-menu-horizontal > .ant-menu-item-selected a:hover 
+{
+    color: black !important;
+}
+
+
+.ant-menu-horizontal > .ant-menu-item a {
+    color: darkgray !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected a{
+    color: black !important;
+
+}

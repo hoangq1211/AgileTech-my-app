@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+.ant-layout {
+  background: #ffffff !important;
+}
+
+.ant-layout-header {
+  background: none !important;
+}
+
+.log-out-button {
+  font-size: 16px;
+  margin: 5px 0 0px -60px;
+  float: right;
+  font-weight: 500;
+  cursor: pointer;
+  color: darkgray;
+}
+
+.ant-btn:hover, .ant-btn:active {
+  border-color: black !important;
+  color: black !important;
+}
+
+.ant-btn:focus {
+  border-color: transparent !important;
+  color: black !important;
+}
