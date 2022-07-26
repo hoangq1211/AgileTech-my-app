@@ -70,6 +70,10 @@ class SessionsTab extends Component {
     selectedRowKeys: [],
   };
 
+  onSelectChange = (selectedRowKey) => {
+    this.setState({ selectedRowKeys: selectedRowKey });
+  };
+
   render() {
     const { selectedRowKeys } = this.state;
     const rowSelection = {
