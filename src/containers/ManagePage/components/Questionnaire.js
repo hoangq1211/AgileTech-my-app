@@ -16,13 +16,66 @@ const iconStyle = {
   cursor: "pointer",
 };
 
+const dataSource = [
+  {
+    key: "1",
+    questionnaire: "Testing questionnaire",
+  },
+  {
+    key: "2",
+    questionnaire: "Testing questionnaire",
+  },
+  {
+    key: "3",
+    questionnaire: "Testing questionnaire",
+  },
+  {
+    key: "4",
+    questionnaire: "Testing questionnaire",
+  },
+  {
+    key: "5",
+    questionnaire: "Testing questionnaire",
+  },
+  {
+    key: "6",
+    questionnaire: "Testing questionnaire",
+  },
+];
+
+const columns = [
+  {
+    title: "Questionnaire",
+    dataIndex: "questionnaire",
+    key: "questionnaire",
+  },
+  {
+    title: "",
+    dataIndex: "address",
+    key: "address",
+    render: () => (
+      <>
+        <EditOutlined style={iconStyle} />
+        <DeleteOutlined style={iconStyle} />
+      </>
+    ),
+  },
+];
+
 class SessionsTab extends Component {
   constructor(props) {
     super(props);
   }
-  state = {};
+  state = {
+    selectedRowKeys: [],
+  };
 
   render() {
+    const { selectedRowKeys } = this.state;
+    const rowSelection = {
+      selectedRowKeys,
+      onChange: this.onSelectChange,
+    };
     return (
       <div className="content-container">
         <Row>
@@ -39,76 +92,12 @@ class SessionsTab extends Component {
             </Row>
           </Col>
         </Row>
-        <table className="table">
-          <tr>
-            <th>
-              <input type="checkbox" name="vehicle1" />
-            </th>
-            <th>Questionnaire</th>
-            <th />
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="vehicle1" />
-            </td>
-            <td>Testing Questionnaire</td>
-            <td>
-              <EditOutlined style={iconStyle} />
-              <DeleteOutlined style={iconStyle} />
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <input type="checkbox" name="vehicle1" />
-            </td>
-            <td>Testing Questionnaire</td>
-            <td>
-              <EditOutlined style={iconStyle} />
-              <DeleteOutlined style={iconStyle} />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="vehicle1" />
-            </td>
-            <td>Testing Questionnaire</td>
-            <td>
-              <EditOutlined style={iconStyle} />
-              <DeleteOutlined style={iconStyle} />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="vehicle1" />
-            </td>
-            <td>Testing Questionnaire</td>
-            <td>
-              <EditOutlined style={iconStyle} />
-              <DeleteOutlined style={iconStyle} />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="vehicle1" />
-            </td>
-            <td>Testing Questionnaire</td>
-            <td>
-              <EditOutlined style={iconStyle} />
-              <DeleteOutlined style={iconStyle} />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="vehicle1" />
-            </td>
-            <td>Testing Questionnaire</td>
-            <td>
-              <EditOutlined style={iconStyle} />
-              <DeleteOutlined style={iconStyle} />
-            </td>
-          </tr>
-        </table>
+        <br />
+        <Table
+          dataSource={dataSource}
+          columns={columns}
+          rowSelection={rowSelection}
+        />
       </div>
     );
   }
