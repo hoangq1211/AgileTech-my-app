@@ -4,7 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: darkgray;
   font-family: 'Montserrat', sans-serif;
-  max-width: 1300px;
 }
 
 code {
