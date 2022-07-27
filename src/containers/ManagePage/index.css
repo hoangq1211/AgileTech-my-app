@@ -44,6 +44,7 @@
     border-left: 10px solid #F1F4FB;
     height: 80vh;
     max-width: 98%;
+    overflow: hidden;
 }
 
 .left-title-container {
@@ -103,6 +104,11 @@
     border-bottom: 15px solid #F1F4FB;
     width: calc(100% + 60px);
     margin-left: -30px;
+}
+
+.custom-table {
+    overflow: hidden;
+    height: calc(100% - 60px);
 }
 
 .custom-table .ant-table tr th, .custom-table .ant-table tr td {
