@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/manage/static/css/main.ada6724d.css",
-    "main.js": "/manage/static/js/main.29765950.js",
-    "static/js/787.28cb0dcd.chunk.js": "/manage/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/manage/index.html",
-    "main.ada6724d.css.map": "/manage/static/css/main.ada6724d.css.map",
-    "main.29765950.js.map": "/manage/static/js/main.29765950.js.map",
-    "787.28cb0dcd.chunk.js.map": "/manage/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/AgileTech-my-app/static/css/main.ada6724d.css",
+    "main.js": "/AgileTech-my-app/static/js/main.3b413336.js",
+    "static/js/787.28cb0dcd.chunk.js": "/AgileTech-my-app/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/AgileTech-my-app/index.html",
+    "main.ada6724d.css.map": "/AgileTech-my-app/static/css/main.ada6724d.css.map",
+    "main.3b413336.js.map": "/AgileTech-my-app/static/js/main.3b413336.js.map",
+    "787.28cb0dcd.chunk.js.map": "/AgileTech-my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ada6724d.css",
-    "static/js/main.29765950.js"
+    "static/js/main.3b413336.js"
   ]
 }
