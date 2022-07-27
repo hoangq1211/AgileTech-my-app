@@ -65,8 +65,12 @@ class SessionsTab extends Component {
                 className="right-title-container"
                 style={{ flexDirection: "row-reverse" }}
               >
-                <Button style={buttonStyle}>Export</Button>
-                <Button style={buttonStyle}>Upload</Button>
+                <div className="custom-button">
+                  <Button>Export</Button>
+                </div>
+                <div className="custom-button">
+                  <Button>Upload</Button>
+                </div>
               </div>
             </Row>
           </Col>
@@ -74,7 +78,15 @@ class SessionsTab extends Component {
         {contents1.map((item) =>
           this.renderSingleContent(item.title, item.content)
         )}
+        
         <div className="divider" />
+        <Row>
+          <Col span={24}>
+            <Row>
+              <h2 className="left-title-container">Model Usage Statistics</h2>
+            </Row>
+          </Col>
+        </Row>
         {contents1.map((item) =>
           this.renderSingleContent(item.title, item.content)
         )}
