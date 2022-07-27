@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AgileTech-my-app/static/css/main.312add28.css",
+    "main.css": "/AgileTech-my-app/static/css/main.9e125b2f.css",
     "main.js": "/AgileTech-my-app/static/js/main.3b413336.js",
     "static/js/787.28cb0dcd.chunk.js": "/AgileTech-my-app/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/AgileTech-my-app/index.html",
-    "main.312add28.css.map": "/AgileTech-my-app/static/css/main.312add28.css.map",
+    "main.9e125b2f.css.map": "/AgileTech-my-app/static/css/main.9e125b2f.css.map",
     "main.3b413336.js.map": "/AgileTech-my-app/static/js/main.3b413336.js.map",
     "787.28cb0dcd.chunk.js.map": "/AgileTech-my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.312add28.css",
+    "static/css/main.9e125b2f.css",
     "static/js/main.3b413336.js"
   ]
 }
