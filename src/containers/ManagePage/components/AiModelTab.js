@@ -39,9 +39,6 @@ const contents1 = [
 ];
 
 class SessionsTab extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {};
 
   renderAllContent = (contents) => {
@@ -49,7 +46,6 @@ class SessionsTab extends Component {
   };
 
   renderSingleContent = (title, content) => {
-    console.log("xxx title", title);
     return (
       <Row className="ai-model-tab-content">
         <Col span={6}>{title}</Col>

@@ -4,7 +4,10 @@
     border-bottom: 3px solid orange !important;
 }
 
-.horiziontal-menu-content-container::after {
+.horiziontal-menu-container.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.horiziontal-menu-container.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-hover::after,
+.horiziontal-menu-container.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.horiziontal-menu-container.ant-menu-horizontal > .ant-menu-item::after {
     border: none !important;
 }
 
@@ -13,18 +16,13 @@
     font-weight: 700;
 }
 
-.ant-menu-horizontal > .ant-menu-item a:hover,
-.ant-menu-horizontal > .ant-menu-item-selected a:hover 
+.horiziontal-menu-container.ant-menu-horizontal > .ant-menu-item a {
+    color: darkgray;
+}
+
+.horiziontal-menu-container.ant-menu-horizontal > .ant-menu-item a:hover,
+.horiziontal-menu-container.ant-menu-horizontal > .ant-menu-item-selected a,
+.horiziontal-menu-container.ant-menu-horizontal > .ant-menu-item-selected a:hover 
 {
-    color: black !important;
-}
-
-
-.ant-menu-horizontal > .ant-menu-item a {
-    color: darkgray !important;
-}
-
-.ant-menu-horizontal > .ant-menu-item-selected a{
-    color: black !important;
-
+    color: black;
 }

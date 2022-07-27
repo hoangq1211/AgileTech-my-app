@@ -52,13 +52,3 @@
   cursor: pointer;
   color: darkgray;
 }
-
-.ant-btn:hover, .ant-btn:active {
-  border-color: black !important;
-  color: black !important;
-}
-
-.ant-btn:focus {
-  border-color: transparent !important;
-  color: black !important;
-}

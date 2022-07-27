@@ -5,13 +5,6 @@ import { Link } from "react-router-dom";
 
 import "../index.css";
 
-const buttonStyle = {
-  background: "lightgray",
-  width: "30%",
-  marginRight: "15px",
-  fontWeight: "700",
-};
-
 const iconStyle = {
   marginLeft: "50px",
   cursor: "pointer",
@@ -70,6 +63,8 @@ const columns = [
     title: "Date",
     dataIndex: "date",
     key: "date",
+    align: 'center',
+    className: 'custom-date-col',
     sorter: (a, b) => a.date - b.age,
   },
   {
@@ -84,9 +79,6 @@ const columns = [
   },
 ];
 class SessionsTab extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     selectedRowKeys: [],
   };
@@ -110,8 +102,12 @@ class SessionsTab extends Component {
             <Row>
               <h2 className="left-title-container">Sessions</h2>
               <div className="right-title-container">
-                <Button style={buttonStyle}>Create</Button>
-                <Button style={buttonStyle}>Export</Button>
+                <div className="custom-button">
+                  <Button>Create</Button>
+                </div>
+                <div className="custom-button">
+                  <Button>Export</Button>
+                </div>
                 <input className="custom-input" placeholder="Search" />
               </div>
             </Row>
@@ -120,6 +116,7 @@ class SessionsTab extends Component {
         <br />
 
         <Table
+          className="custom-table"
           dataSource={dataSource}
           columns={columns}
           rowSelection={rowSelection}

@@ -7,32 +7,35 @@ import "./index.css";
 const items = [
   {
     key: "sessions",
-    to: ROUTER.SESSIONS,
-    content: "SESSIONS",
+    label: 
+    (
+      <Link to="/sessions">
+        <span className="horiziontal-menu-content">SESSIONS</span>
+      </Link>
+    ),
   },
   {
     key: "manage",
-    to: ROUTER.MANAGE,
-    content: "MANAGE",
+    label: 
+    (
+      <Link to="/manage">
+        <span className="horiziontal-menu-content">MANAGE</span>
+      </Link>
+    ),
   },
   {
     key: "user-admin",
-    to: ROUTER.USER_ADMIN,
-    content: "USER-ADMIN",
+    label: 
+    (
+      <Link to="/user-admin">
+        <span className="horiziontal-menu-content">USER-ADMIN</span>
+      </Link>
+    ),
   },
 ];
 
 function HorizontalMenu() {
-  const renderMenuItem = ({ key, to, content }) => (
-    <Menu.Item key={key} className="horiziontal-menu-content-container">
-      <Link to={to}>
-        <span className="horiziontal-menu-content">{content}</span>
-      </Link>
-    </Menu.Item>
-  );
-
   const currentRoute = window.location.pathname;
-  console.log("xxx currentRoute", currentRoute.slice(1));
 
   return (
     <>
@@ -44,9 +47,7 @@ function HorizontalMenu() {
           currentRoute !== "/" ? currentRoute.slice(1) : "manage",
         ]}
         items={items}
-      >
-        {items.map((item) => renderMenuItem(item))}
-      </Menu>
+      />
     </>
   );
 }

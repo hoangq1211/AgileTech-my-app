@@ -63,9 +63,6 @@ const columns = [
 ];
 
 class SessionsTab extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     selectedRowKeys: [],
   };
@@ -91,13 +88,16 @@ class SessionsTab extends Component {
                 style={{ flexDirection: "row-reverse" }}
               >
                 <input className="custom-input" placeholder="Search" />
-                <Button style={buttonStyle}>Create</Button>
+                <div className="custom-button">
+                  <Button>Create</Button>
+                </div>
               </div>
             </Row>
           </Col>
         </Row>
         <br />
         <Table
+          className="custom-table"
           dataSource={dataSource}
           columns={columns}
           rowSelection={rowSelection}

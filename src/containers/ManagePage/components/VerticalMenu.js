@@ -2,35 +2,48 @@ import { Menu, Layout } from "antd";
 
 import "../index.css";
 
-const items = [
+const items = (selectTab) => [
   {
     key: "sessions",
-    content: "Sessions",
+    label: 
+    (
+      <a onClick={() => selectTab("sessions")}>
+        <span className="vertical-menu-content">Sessions</span>
+      </a>
+    ),
   },
   {
     key: "threshold_sets",
-    content: "Threshold Sets",
+    label: 
+    (
+      <a onClick={() => selectTab("threshold_sets")}>
+        <span className="vertical-menu-content">Threshold Sets</span>
+      </a>
+    ),
   },
   {
     key: "questionnaire",
-    content: "Questionnaire",
+    label: 
+    (
+      <a onClick={() => selectTab("questionnaire")}>
+        <span className="vertical-menu-content">Questionnaire</span>
+      </a>
+    ),
   },
   {
     key: "ai-model",
-    content: "AI Model",
+    label: 
+    (
+      <a onClick={() => selectTab("ai-model")}>
+        <span className="vertical-menu-content">AI Model</span>
+      </a>
+    ),
   },
 ];
 
 const { Sider } = Layout;
 
 function VerticalMenu(props) {
-  const renderMenuItem = ({ key, content }) => (
-    <Menu.Item key={key} className="vertical-menu-content-container">
-      <a onClick={() => props.selectTab(key)}>
-        <span className="vertical-menu-content">{content}</span>
-      </a>
-    </Menu.Item>
-  );
 
   return (
     <Sider width={200} className="site-layout-background">
@@ -39,10 +52,8 @@ function VerticalMenu(props) {
         theme="light"
         mode="vertical"
         defaultSelectedKeys={["sessions"]}
-        items={items}
-      >
-        {items.map((item) => renderMenuItem(item))}
-      </Menu>
+        items={items(props.selectTab)}
+      />
     </Sider>
   );
 }

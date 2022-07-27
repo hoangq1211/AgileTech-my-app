@@ -1,5 +1,5 @@
 .tab-menu-container {
-    border: 15px solid lightgray;
+    border: 15px solid #F1F4FB;
     padding-left: 5px;
     padding-right: 70px;
     height: 80vh;
@@ -11,43 +11,37 @@
     color: black;
 }
 
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+.vertical-menu-container.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: transparent !important;
     border-left: 6px solid black !important;
 }
 
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item {
-    border-left: 6px solid lightgray;
+.vertical-menu-container.ant-menu:not(.ant-menu-horizontal) .ant-menu-item {
+    border-left: 6px solid #F1F4FB;
     margin-bottom: -5px !important;
 
 }
-
 
 .vertical-menu-content {
     font-size: 16px;
     font-weight: 700;
 }
 
-.ant-menu-vertical > .ant-menu-item a:hover,
-.ant-menu-vertical > .ant-menu-item-selected a:hover 
+.vertical-menu-container.ant-menu-vertical > .ant-menu-item a {
+    color: darkgray !important;
+}
+
+.vertical-menu-container.ant-menu-vertical > .ant-menu-item a:hover,
+.vertical-menu-container.ant-menu-vertical > .ant-menu-item-selected a,
+.vertical-menu-container.ant-menu-vertical > .ant-menu-item-selected a:hover 
 {
     color: black !important;
 }
 
-
-.ant-menu-vertical > .ant-menu-item a {
-    color: darkgray !important;
-}
-
-.ant-menu-vertical > .ant-menu-item-selected a{
-    color: black !important;
-
-}
-
 .content-container {
     padding: 30px;
-    border: 15px solid lightgray;
-    border-left: 10px solid lightgray;
+    border: 15px solid #F1F4FB;
+    border-left: 10px solid #F1F4FB;
     height: 80vh;
     max-width: 98%;
 }
@@ -65,9 +59,27 @@
     float: right;
 }
 
-.ant-btn:hover, .ant-btn:focus .ant-btn:active {
-    border: black !important;
-    color: black !important;
+.custom-button {
+    width: 30%;
+    margin-right: 15px;
+}
+
+.custom-button .ant-btn{
+    background: #F1F4FB;
+    font-weight: 700;
+    width: 100%;
+    color: darkgray;
+    border: transparent;
+}
+
+.custom-button .ant-btn:focus {
+    color: darkgray;
+    background: #F1F4FB;
+}
+
+.custom-button .ant-btn:hover, .custom-button .ant-btn:active {
+    color: black;
+    background: #F1F4FB;
 }
 
 .custom-input {
@@ -88,35 +100,53 @@
 .divider{
     margin-top: 30px; 
     margin-bottom: 30px; 
-    border-bottom: 15px solid lightgray;
+    border-bottom: 15px solid #F1F4FB;
     width: calc(100% + 60px);
     margin-left: -30px;
 }
 
-.ant-table tr th, .ant-table tr td {
+.custom-table .ant-table tr th, .custom-table .ant-table tr td {
     border-bottom:  1px solid #ccc;
-    padding: 10px;
     border-right: 1px solid #ccc;
 }
-.ant-table tr th:first-child, .ant-table tr td:first-child{
-    width: 30px;
 
-}
-
-.ant-table tr th:last-child, .ant-table tr td:last-child{
+.custom-table .ant-table tr th:last-child, .custom-table .ant-table tr td:last-child{
     border-right: none;
 
 }
 
-.ant-table tr:last-child td{
+.custom-table .ant-table tr:last-child td{
     border-bottom: none
 }
 
 
-.ant-pagination-item-active a {
-    color: black !important;
+.custom-table .ant-pagination-item-active a {
+    color: black;
 }
 
-.ant-pagination-item-active {
-    border-color: black !important;
+.custom-table .ant-pagination-item-active {
+    border-color: black;
+}
+
+.custom-table .ant-table-filter-column {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.custom-table .ant-table-column-title {
+    position: relative;
+    z-index: 1;
+    flex: 0.4 1;
+}
+
+.custom-date-col {
+    max-width: 80px;
+}
+
+.custom-table .ant-table-column-sorters {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
 }
